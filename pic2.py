@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+from Tkinter import *
+tk = Tk()
+c = Canvas(tk, width=300, height=300, bg="white")
+
+c.create_arc((5, 5, 50, 50), style=PIESLICE)
+c.create_arc((55, 5, 100, 50), style=ARC)
+c.create_arc((105, 5, 150, 50), style=CHORD, start=0, extent=150, fill="blue")
+c.create_line([(5, 55), (55, 55), (30, 95)], smooth=1)
+c.create_polygon([(205, 55), (255, 55), (230, 95)], fill="green")
+c.create_oval((5, 105, 50, 120),)
+c.create_rectangle((105, 105, 150, 130), fill="red", outline="grey", width="5")
+c.create_text((5, 205), text="HELLO", anchor="nw")
+c.create_oval((5, 205, 6, 206), outline="red")
+c.create_text((105, 205), text="Hello, \nmy friend!", justify="left", anchor="c")
+c.create_oval((105, 205, 106, 206), outline="red")
+c.create_text((205, 205), text="Hello, \nmy friend!", justify="center", anchor="se")
+c.create_oval((205, 205, 206, 206), outline="red")
+c.pack()
+tk.mainloop()
